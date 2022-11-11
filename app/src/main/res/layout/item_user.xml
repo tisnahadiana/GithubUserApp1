@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:padding="8dp">
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/iv_item_avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:siBorderColor="@android:color/holo_green_dark"
+        app:siBorderWidth="3dp"
+        app:siRadius="6dp"
+        app:siSquare="true"
+        tools:src="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        style="@style/TextViewChild"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/iv_item_avatar"
+        android:layout_toRightOf="@+id/iv_item_avatar"
+        android:text="@string/user"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_avatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_item_username"
+        android:layout_width="16dp"
+        android:layout_height="18dp"
+        android:layout_below="@id/tv_item_name"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/iv_item_avatar"
+        android:layout_toRightOf="@+id/iv_item_avatar"
+        android:src="@drawable/ic_username"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_name" />
+
+    <TextView
+        android:id="@+id/tv_item_username"
+        style="@style/TextViewChild"
+        android:layout_below="@id/tv_item_name"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/iv_item_username"
+        android:layout_toRightOf="@+id/iv_item_username"
+        android:maxLines="1"
+        android:text="@string/username"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_name" />
+
+    <ImageView
+        android:id="@+id/iv_item_company"
+        android:layout_width="16dp"
+        android:layout_height="18sp"
+        android:layout_below="@id/tv_item_username"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/iv_item_avatar"
+        android:layout_toRightOf="@+id/iv_item_avatar"
+        android:src="@drawable/ic_company"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item_username" />
+
+    <TextView
+        android:id="@+id/tv_item_company"
+        style="@style/TextViewChild"
+        android:layout_below="@id/tv_item_username"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/iv_item_company"
+        android:layout_toRightOf="@+id/iv_item_company"
+        android:maxLines="1"
+        android:text="@string/company"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_username" />
+
+    <Button
+        android:id="@+id/btn_share"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_company"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/iv_item_avatar"
+        android:layout_toRightOf="@+id/iv_item_avatar"
+        android:drawableStart="@drawable/ic_action_share"
+        android:drawableLeft="@drawable/ic_action_share"
+        android:text="@string/share"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_company" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
